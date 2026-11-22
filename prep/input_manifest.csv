@@ -1,0 +1,5 @@
+File,Source,Rows,FirstDate,LastDate,SHA256
+data/csmar_adjusted_long.csv,CSMAR adjusted quotations,19570,2009-12-31,2024-12-31,80f84290e39822c16b04a91be5140ac0e32603ed8df53919b4e59f108c50b355
+data/trading_calendar.csv,CSMAR explicit trading-state fields,3644,2009-12-31,2024-12-31,2911dd3c6606a389ed83fb429c36ee12570b0103ec3bd888f049055b1828866b
+data/treasury_3m_quotes.csv,"ChinaBond government bond yield curve, 3-month tenor",3753,2009-12-31,2024-12-31,f9e05b09ba9f05383a45ae8389daf45a6ea2794a587dd6fe8672005d0425f08f
+data/csi300_close.csv,"China Securities Index Co., CSI 300 price index 000300",3910,2008-12-01,2024-12-31,192bb76d89ba7cd5b92e16360e994430c90ea0ab982c4693fa2888cd40ec9647

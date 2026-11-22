@@ -53,3 +53,19 @@ rsconnect/
 src/*.o
 src/*.so
 src/*.dll
+
+# Group-only source data and daily analysis outputs
+/data/raw/
+/data/*.csv
+/CSV/Q1_returns_and_prices.csv
+/CSV/Q1b_random_10000_portfolios.csv
+/handoff/Q2_Q3_handoff.csv
+/verification/
+/sessionInfo.txt
+
+# Reports are kept local until the group version is ready
+/report/
+/reports/
+/FIN305_Report_Template.docx
+*.zip
+.DS_Store

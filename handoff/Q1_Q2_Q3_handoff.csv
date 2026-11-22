@@ -1,0 +1,12 @@
+﻿交接项目,确定的口径或要求,文件或字段,Q1交付状态,Q2确认,Q3确认
+样本期间,2010-01-04 至 2024-12-31，日频；2009-12-31 仅作首日收益基准,CSV/Q1_returns_and_prices.csv,已按此运行,待确认采用,待确认采用
+停牌与复牌,当日与前一市场交易日均正常、未填充且报价有效，才计算收益；停牌及复牌首日收益剔除,R/FIN305_Q1_complete.R 第1节；ReturnEligible,口径由 Lois 确定,待确认采用,待确认采用
+共同样本,只保留五股同日均有有效单期收益的日期；3643个市场日保留3258天，排除385天,CSV/Q1_returns_and_prices.csv 的 CommonSample=TRUE,已核验3258天,待核对日期完全一致,待核对日期完全一致
+交易日与断档,共同样本有58处断档。用完整日历按Date匹配SessionIndex，保留真实日期,data/trading_calendar.csv,日历已随包提供,核对每个预测日与实际收益日,核对模型观测步长与市场日的对应
+股票顺序,000651格力、002032苏泊尔、600060海信视像、600690海尔智家、600839四川长虹,CSV/Q1_portfolio_weights.csv 的 Symbol,权重带股票代码,按代码匹配收益列,按代码匹配收益列
+收益与单位,后续组合采用日简单收益；代码内为小数，0.01表示1%；年化使用252天,各股票 *_SimpleReturn 列,已按此运行,待确认采用,待确认采用
+无风险代理,中债3个月国债收益率；取收益日前最近报价，按(1+y/100)^(1/252)-1换算；Q1优化使用共同样本平均日利率,RfQuoteDate、RfAnnualYieldPct、RfDailyReturn；data/treasury_3m_quotes.csv,已核验匹配和换算,引用Q1的利率设定,引用Q1的利率设定
+Q2使用权重,Q2(b/c)固定使用无约束切点权重 Tangency_Unconstrained，保留完整精度及负权重,CSV/Q1_portfolio_weights.csv,已独立复算,待确认读取正确列,不适用
+Q3使用权重,Q3使用 GMV_Unconstrained 和 Tangency_Unconstrained 两列,CSV/Q1_portfolio_weights.csv,已独立复算,不适用,待确认读取正确列
+跨断档预测,筛选规则沿用本表。相邻保留观测可能跨多个市场日，预测日及模型一步的解释须在相应题目写清,Date 与匹配后的 SessionIndex,交接时提示,待负责者注明回测日期匹配方法,待负责者注明GARCH时间步与预测日期
+版本与复现,项目使用305risk-R.Rproj统一定位；图2/3已更新；数值CSV沿用已核验版本，11项自检均TRUE,305risk-R.Rproj；CSV/Q1_self_checks.csv,已核验,填入确认人和日期,填入确认人和日期
