@@ -1,0 +1,3 @@
+TradingDate [交易日期] - 以YYYY-MM-DD表示。
+SecurityID [证券ID] - null
+ClosePrice [收盘价] - 收盘价。

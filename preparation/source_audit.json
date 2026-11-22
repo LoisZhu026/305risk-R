@@ -1,0 +1,32 @@
+{
+  "adjusted_original_rows": 23490,
+  "adjusted_unique_rows": 19570,
+  "identical_overlapping_rows": 3920,
+  "conflicting_overlapping_rows": 0,
+  "raw_rows": 17886,
+  "all_original_raw_keys_matched": true,
+  "market_sessions_including_prehistory": 3644,
+  "market_sessions_2010_2024": 3643,
+  "treasury_quote_rows": 3753,
+  "security_id_mapping": {
+    "000651": "201000000304",
+    "002032": "201000000738",
+    "600060": "201000003412",
+    "600690": "201000003968",
+    "600839": "201000004117"
+  },
+  "archive_sha256": {
+    "preparation/CSMAR_stock_originalsource/adjusted/股票历史日行情信息表(后复权)145844747(仅供西交利物浦大学使用).zip": "1bc4e01067cbba5fa1ffe49e6be83207e60be0bc7d83dd7f2da0b82c49db0e58",
+    "preparation/CSMAR_stock_originalsource/adjusted/股票历史日行情信息表(后复权)150133482(仅供西交利物浦大学使用).zip": "46c714fe4adb64d8d1f52ff619d0fc82686596d5dad27d766cd178ec8c9569e2",
+    "preparation/CSMAR_stock_originalsource/adjusted/股票历史日行情信息表(后复权)150231186(仅供西交利物浦大学使用).zip": "92732bfbaad22cac6340b4f5310f091f36590184e5967a65132c2fc6aac0c61b",
+    "preparation/CSMAR_stock_originalsource/adjusted/股票历史日行情信息表(后复权)150412834(仅供西交利物浦大学使用).zip": "f65d04972a0406989cb6c412ebc6952c0e11452be01df7814248f8ebddfa6d84",
+    "preparation/CSMAR_stock_originalsource/adjusted/股票历史日行情信息表(后复权)151012648.zip": "b8631ab0e0aff75a587f6e6dbd17b52039226d413edd54b151f178ca1cfaf869",
+    "preparation/CSMAR_stock_originalsource/raw/股票日行情信息表075105684(仅供西交利物浦大学使用).zip": "e7bfd16d34bcb3986f9e17d3f9c40a44fc5954bb098ec0ce7f98663a4d377f12",
+    "preparation/CSMAR_stock_originalsource/raw/股票日行情信息表075205345(仅供西交利物浦大学使用).zip": "eae4be0085389855e9667fe21669a33645d0a4fc5d7d7b59d84bdea5d38ae46d",
+    "preparation/CSMAR_stock_originalsource/raw/股票日行情信息表075230413(仅供西交利物浦大学使用).zip": "e2204c961148608fd3c48f9e3fbefbf0d5377ef83a5fb56ab23af1fbe9b5ca7e",
+    "preparation/CSMAR_stock_originalsource/raw/股票日行情信息表075247758(仅供西交利物浦大学使用).zip": "d6b85e3063a9c866502043d7d7a6ce3cb24775ad4cc1f591a40555665bdca700",
+    "preparation/CSMAR_stock_originalsource/raw/股票日行情信息表075254889(仅供西交利物浦大学使用).zip": "a4925185955a2616c27ee1595c8975ca94d6a90769bca0513cc8e303acf8fd97",
+    "preparation/ChinaBond_original/中债3个月国债收益率（原文件）.zip": "2fccddb513510af1dbd9eccb4458c3094cf34d79bc839c5a68ed956173f65bc1"
+  },
+  "scope": "Source-table assembly only. Returns and portfolio analysis are calculated in R."
+}

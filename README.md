@@ -3,9 +3,10 @@ Risk Management group project (R): mean–variance portfolio analysis of five Ch
 
 ## Running the project
 
-This repository is public. Obtain the group-only input package and copy its four
-CSV inputs into `data/` before running. Source data and daily return files are
-excluded from Git; see [input preparation and sources](prep/DATA_PREPARATION.md).
+Clone or download this repository in full. It includes the current scripts,
+all four input CSVs, Q1 outputs, the daily Q2/Q3 hand-off, and the original source
+exports. No separate input package is needed. See
+[input preparation and sources](preparation/DATA_PREPARATION.md).
 
 1. Double-click `305risk-R.Rproj` to open the project in RStudio. This sets the
    project working directory; the project file itself does not run calculations.
@@ -14,6 +15,9 @@ excluded from Git; see [input preparation and sources](prep/DATA_PREPARATION.md)
 4. To regenerate the separate development hand-off, run
    `Rscript handoff/make_handoff.R` from the project directory. An absolute path
    to either R script also works from outside the project.
+
+The R analysis uses base R only. Python and `openpyxl` are needed only for the
+optional original-export check: `python3 preparation/prepare_inputs.py --check`.
 
 ## Scope
 
@@ -29,20 +33,29 @@ excluded from Git; see [input preparation and sources](prep/DATA_PREPARATION.md)
     ├── 305risk-R.Rproj
     ├── R/
     │   └── FIN305_Q1_complete.R   Main submission script. Q2 and Q3 are appended to it.
-    ├── data/                      Group-only CSV inputs; GitHub tracks only a placeholder
+    ├── data/                      Four current CSV inputs, included in the repository
     │   ├── csmar_adjusted_long.csv Five-stock adjusted prices and trading/filling flags
     │   ├── trading_calendar.csv   Full market-session calendar
     │   ├── treasury_3m_quotes.csv ChinaBond original 3-month annual yield quotes
     │   └── csi300_close.csv       CSI 300 price-index daily closes for Q3
-    ├── prep/                      Source/preparation notes and input checksums
+    ├── preparation/               Original exports, source-only preparation and evidence
+    │   ├── CSMAR_stock_originalsource/  Ten original ZIPs and individual Excel tables
+    │   ├── ChinaBond_original/    Original ZIP and sixteen individual Excel exports
+    │   ├── prepare_inputs.py      Rebuild/check source tables; no return calculations
+    │   ├── csmar_raw_long.csv     Original unadjusted quotes, combined for traceability
+    │   ├── input_inventory.csv   Ten CSMAR export batches
+    │   ├── input_manifest.csv    Input coverage and checksums
+    │   ├── source_audit.json     Original-export reconciliation and archive checksums
+    │   └── DATA_PREPARATION.md   Sources, fields and preparation instructions
     ├── handoff/                   Q1 output prepared for Q2/Q3, and the R script that creates it
     ├── CSV/                       Result tables for all questions (Q1..., Q2..., Q3...)
-    └── Figures/                   Figures written by the main script
+    ├── Figures/                   Figures written by the main script
+    └── sessionInfo.txt            R environment from the actual run
 
-`prep/` contains preparation notes and input checksums, not the source datasets.
-The group package includes the four CSVs under `data/`; original CSMAR ZIPs and
-ChinaBond Excel exports remain in the existing source archive described in
-`prep/DATA_PREPARATION.md`.
+The repository is the current shared reference. Original ZIPs are preserved for
+provenance, while their Excel tables and the current input/output CSVs are also
+available individually. Superseded reports, analysis scripts and intermediate
+return files are not carried forward; current returns are generated in R.
 
 `data/` holds analysis inputs; `CSV/` holds calculated table outputs for Q1, Q2
 and Q3, with question-prefixed filenames to keep them distinct. Q1 reads the
@@ -78,9 +91,9 @@ Annualised risk-free rate: 2.364%. The constrained GMV equals the unconstrained 
 
 | File under `handoff/` | Purpose | Availability |
 |---|---|---|
-| `Q1_Q2_Q3_handoff.csv` | Written conventions/receipt checklist; Q2/Q3 owners confirm the relevant rows | Public repository |
-| `Q2_Q3_handoff.csv` | R-generated daily data from Q1: five stock returns, risk-free inputs, portfolio returns and date gaps | Group package only |
-| `make_handoff.R` | Runs the main Q1 script and exports the daily hand-off CSV | Public repository |
+| `Q1_Q2_Q3_handoff.csv` | Written conventions/receipt checklist; Q2/Q3 owners confirm the relevant rows | Included |
+| `Q2_Q3_handoff.csv` | R-generated daily data from Q1: five stock returns, risk-free inputs, portfolio returns and date gaps | Included |
+| `make_handoff.R` | Runs the main Q1 script and exports the daily hand-off CSV | Included |
 
 The daily hand-off lets Q2/Q3 reuse the actual Q1 results without rebuilding
 returns. It is a development aid; in the final submission, Q2/Q3 code uses the

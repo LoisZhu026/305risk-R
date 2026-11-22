@@ -48,4 +48,4 @@ write.csv(handoff, file.path(root, "handoff", "Q2_Q3_handoff.csv"),
           row.names = FALSE, na = "", fileEncoding = "UTF-8")
 cat("\nHand-off rows:", nrow(handoff),
     "; market-session gaps:", sum(handoff$SessionGapFromPreviousObs > 1, na.rm = TRUE),
-    "\nSaved to handoff/Q2_Q3_handoff.csv (group-only; excluded from Git).\n")
+    "\nSaved to handoff/Q2_Q3_handoff.csv.\n")

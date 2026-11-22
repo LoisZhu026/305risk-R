@@ -1,0 +1,7 @@
+TradingDate [交易日期] - 以YYYY-MM-DD表示。
+Symbol [证券代码] - null
+ShortName [股票简称] - null
+Filling [填充标识] - 0=不填充，正常交易数据。1=非节假日填充，2=节假日填充。
+ClosePrice [收盘价] - 计算公式为：收盘价*后累计复权因子。A股以人民币元计，上海B以美元计，深圳B以港币计。
+Distance [距前交易日天数] - null
+StateCode [交易状态编码] - 0=正常交易，1=交易日停牌，2=节假日休市
